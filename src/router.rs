@@ -2,6 +2,7 @@ use yew_router::prelude::*;
 use yew::prelude::*;
 
 use super::modules::Home;
+use super::modules::Projects;
 use super::modules::base::Navbar;
 use super::modules::base::Footer;
 
@@ -17,6 +18,9 @@ fn switch(routes: &Route) -> Html {
     match routes {
         Route::Home => html! {
             <Home />
+        },
+        Route::Projects => html! {
+            <Projects />
         },
         _ => html! { <p>{ "404" }</p> }
     }

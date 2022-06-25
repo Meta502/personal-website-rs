@@ -5,7 +5,7 @@ dist = "dist"
 [[hooks]]
 stage = "build"
 command = "sh"
-command_arguments = ["-c", "tailwindcss -c ./tailwind.config.js -o tailwind.css"]
+command_arguments = ["-c", "tailwindcss -c ./tailwind.config.js -o static/css/tailwind.css"]
 
 [profile.release]
 lto = true
