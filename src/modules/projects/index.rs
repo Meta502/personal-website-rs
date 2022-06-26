@@ -9,6 +9,8 @@ pub fn projects() -> Html {
                 <span class={classes!("text-onedark-purple")}>{" PROJECTS "}</span>
                 {" that I've done."}
             </p>
+            <div class={classes!("")}>
+            </div>
         </div>
     }
 }

@@ -9,6 +9,18 @@ use crate::router::{Route};
 
 use super::schemas::NavbarItem;
 
+#[function_component(Header)]
+pub fn header() -> Html {
+    html! {
+        <div class={classes!("flex", "flex-col", "justify-center", "items-center", "font-mono", "text-onedark-white")}>
+            <div class={classes!("flex", "flex-col", "justify-center", "items-center", "space-y-2")}>
+                <img class={classes!("w-12")} src="https://ardizza.tech/icons/logo.png" />
+                <h1 class={classes!("text-2xl")}>{"Adrian Ardizza"}</h1>
+            </div>
+        </div>
+    }
+}
+
 #[function_component(NavigationMenu)]
 pub fn navigation_menu() -> Html {
     let on_navbar_click = {
@@ -49,7 +61,7 @@ pub fn navigation_menu() -> Html {
                 html! {
                     <button class={classes!(
                         "hover:underline",
-                        current.then(|| Some("underline"))
+                        current.then(|| Some("underline h-full"))
                     )} onclick={on_navbar_select}>{ &x.name }</button>
                 }
             }).collect::<Html>() }
@@ -57,14 +69,14 @@ pub fn navigation_menu() -> Html {
     }
 }
 
-#[function_component(Header)]
-pub fn header() -> Html {
+#[function_component(Navbar)]
+pub fn navbar() -> Html {
     html! {
-        <div class={classes!("flex", "flex-col", "justify-center", "items-center", "font-mono", "text-onedark-white")}>
-            <div class={classes!("flex", "flex-col", "justify-center", "items-center", "space-y-2")}>
-                <img class={classes!("w-12")} src="https://ardizza.tech/icons/logo.png" />
-                <h1 class={classes!("text-2xl")}>{"Adrian Ardizza"}</h1>
+        <>
+            <div class={classes!("max-w-4xl", "w-full", "flex", "flex-col", "justify-center", "items-center", "space-y-2", "py-4")}>
+                <Header />
+                <NavigationMenu />
             </div>
-        </div>
+        </>
     }
 }

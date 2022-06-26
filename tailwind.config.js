@@ -17,6 +17,7 @@ module.exports = {
           tosca: "#56B6C2",
           white: "#DCDFE4",
           gray: "#282C34",
+          black: "#171B21",
         },
       },
     },

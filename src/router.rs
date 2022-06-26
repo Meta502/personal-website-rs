@@ -33,14 +33,16 @@ pub fn goto(history: &AnyHistory, route: Route) {
 #[function_component(Main)]
 pub fn app() -> Html {
     html! {
-        <div class={classes!("bg-onedark-gray", "min-h-screen", "font-mono", "py-16", "w-full")}>
+        <div class={classes!("bg-onedark-black", "min-h-screen", "font-mono", "py-16", "w-full", "flex", "flex-col", "items-center", "justify-center")}>
             <BrowserRouter>
                 <Navbar />
-                <div class={classes!("max-w-3xl", "mx-auto", "w-full", "h-0.5", "my-4", "bg-white")} />
-                <div class={classes!("w-full", "max-w-3xl", "mx-auto")}>
-                    <Switch<Route> render={Switch::render(switch)} />
+                <div class={classes!("max-w-4xl", "mx-auto", "w-full", "px-6")}>
+                    <div class={classes!("w-full", "h-0.5", "my-4", "bg-white")} />
+                        <div class={classes!("w-full")}>
+                            <Switch<Route> render={Switch::render(switch)} />
+                        </div>
+                    <div class={classes!("w-full", "h-0.5", "my-4", "bg-white")} />
                 </div>
-                <div class={classes!("max-w-3xl", "mx-auto", "w-full", "h-0.5", "my-4", "bg-white")} />
                 <Footer />
             </BrowserRouter>
         </div>

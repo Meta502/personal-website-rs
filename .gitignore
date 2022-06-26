@@ -1,2 +1,4 @@
 /target
 dist
+package.json
+node_modules

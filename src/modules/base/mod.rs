@@ -1,6 +1,5 @@
-mod components;
-mod index;
-mod schemas;
+mod footer;
+mod navbar;
 
-pub use index::Navbar;
-pub use index::Footer;
+pub use navbar::Navbar as Navbar;
+pub use footer::Footer as Footer;
