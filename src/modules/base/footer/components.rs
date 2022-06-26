@@ -31,9 +31,6 @@ pub fn info() -> Html {
                 <span class={classes!("text-onedark-yellow")}>{"Rust"}</span>
                 {"!"}
             </p>
-            <p class={classes!("text-onedark-white", "text-center", "text-[0.8rem]")}>
-                <small>{r"*Technically it still builds to WASM + JS, but ah well ¯\_(ツ)_/¯"}</small>
-            </p>
         </div>
     }
 }

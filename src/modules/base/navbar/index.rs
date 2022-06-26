@@ -33,7 +33,7 @@ pub fn navigation_menu() -> Html {
 
     let routes = vec!(
         NavbarItem {
-            name: "About".to_string(),
+            name: "Home".to_string(),
             href: Route::Home,
         },
         NavbarItem {

@@ -22,7 +22,6 @@ fn switch(routes: &Route) -> Html {
         Route::Projects => html! {
             <Projects />
         },
-        _ => html! { <p>{ "404" }</p> }
     }
 }
 
