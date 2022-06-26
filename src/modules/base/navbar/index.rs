@@ -60,8 +60,8 @@ pub fn navigation_menu() -> Html {
 
                 html! {
                     <button class={classes!(
-                        "hover:underline",
-                        current.then(|| Some("underline h-full"))
+                        "hover:text-onedark-blue",
+                        current.then(|| Some("text-onedark-blue h-full"))
                     )} onclick={on_navbar_select}>{ &x.name }</button>
                 }
             }).collect::<Html>() }
@@ -73,7 +73,7 @@ pub fn navigation_menu() -> Html {
 pub fn navbar() -> Html {
     html! {
         <>
-            <div class={classes!("max-w-4xl", "w-full", "flex", "flex-col", "justify-center", "items-center", "space-y-2", "py-4")}>
+            <div class={classes!("max-w-4xl", "w-full", "flex", "flex-col", "justify-center", "items-center", "space-y-2")}>
                 <Header />
                 <NavigationMenu />
             </div>

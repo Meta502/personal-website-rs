@@ -37,11 +37,11 @@ pub fn app() -> Html {
             <BrowserRouter>
                 <Navbar />
                 <div class={classes!("max-w-4xl", "mx-auto", "w-full", "px-6")}>
-                    <div class={classes!("w-full", "h-0.5", "my-4", "bg-white")} />
+                    <div class={classes!("w-full", "h-0.5", "my-6", "bg-white")} />
                         <div class={classes!("w-full")}>
                             <Switch<Route> render={Switch::render(switch)} />
                         </div>
-                    <div class={classes!("w-full", "h-0.5", "my-4", "bg-white")} />
+                    <div class={classes!("w-full", "h-0.5", "my-6", "bg-white")} />
                 </div>
                 <Footer />
             </BrowserRouter>
